@@ -132,7 +132,7 @@ export default function Form() {
               <Link
                 href="https://legal.rdstation.com/pt/privacy-policy/"
                 target="_blank"
-                aria-label=""
+                aria-label="ir para a politica de privacidade da rdstation"
               >
                 Política de privacidade.
               </Link>

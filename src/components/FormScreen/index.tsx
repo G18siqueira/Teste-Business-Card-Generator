@@ -18,7 +18,12 @@ export default function FormScreen(props: FormScreenProps) {
             </p>
           </S.Title>
           <S.FormWrapper>
-            <Image src={cardImg} width={471} height={347} alt="" />
+            <Image
+              src={cardImg}
+              width={471}
+              height={347}
+              alt="imagem de um personagem pintando um cartão"
+            />
             <Form />
           </S.FormWrapper>
         </S.Content>

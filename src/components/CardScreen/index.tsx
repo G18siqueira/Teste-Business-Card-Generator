@@ -27,7 +27,12 @@ export default function CardScreen(props: CardScreenProps) {
       <G.Container>
         <S.CardWrapper>
           <S.CardImg>
-            <Image src={cardImg} width={456} height={336} alt="" />
+            <Image
+              src={cardImg}
+              width={456}
+              height={336}
+              alt="imagem de um personagem pintando um cartão"
+            />
           </S.CardImg>
 
           <S.CardContent>
@@ -56,7 +61,7 @@ export default function CardScreen(props: CardScreenProps) {
             <Link
               href="https://app.rdstation.com.br/signup"
               target="_blank"
-              aria-label=""
+              aria-label="ir para o site app.rdstation/signup"
             >
               <span>fazer um teste grátis do RD Station Marketing</span>
               <MdArrowRightAlt size={30} />
