@@ -48,14 +48,16 @@ export const CardContent = styled.div`
       gap: 0.75rem;
     }
 
-    &:hover {
-      span {
-        &::before {
-          width: 100%;
+    @media screen and (min-width: 1200px) {
+      &:hover {
+        span {
+          &::before {
+            width: 100%;
+          }
         }
-      }
-      svg {
-        transform: translateX(0.3125rem);
+        svg {
+          transform: translateX(0.3125rem);
+        }
       }
     }
 
