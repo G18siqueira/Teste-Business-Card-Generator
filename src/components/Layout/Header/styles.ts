@@ -20,6 +20,7 @@ export const Content = styled.div`
   span {
     font-family: var(--darkerGrotesque);
     font-size: 1.125rem;
+    color: var(--gray-900);
 
     @media screen and (min-width: 768px) {
       font-size: 1.5rem;

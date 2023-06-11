@@ -20,7 +20,7 @@ export const GeneralButton = styled.button`
     content: '';
     width: 100%;
     height: 0.25rem;
-    background-color: #000;
+    background-color: var(--black);
     position: absolute;
     bottom: -5px;
     clip-path: polygon(0 0, 100% 0, 99.5% 100%, 0.6% 100%);
@@ -39,6 +39,7 @@ export const GeneralButton = styled.button`
   &:disabled {
     background-color: var(--gray-200);
     border: 0;
+    cursor: not-allowed;
     &::after {
       background-color: var(--gray-600);
       bottom: -4px;

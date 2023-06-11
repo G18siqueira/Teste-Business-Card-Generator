@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { DataContext } from '@/contexts/DataContext'
+import { formatPhoneNumber } from '@/utils/formatter'
 import { MdOutlineKeyboardArrowLeft, MdArrowRightAlt } from 'react-icons/md'
 
 import Button from '../Ui/Button'
@@ -8,6 +9,7 @@ import Image from 'next/image'
 
 import cardImg from '../../assets/landingpage2.png'
 import symbolImg from '../../assets/symbol.svg'
+import arrowImg from '../../assets/arrowDown.svg'
 
 import * as G from '@/styles/global'
 import * as S from './styles'
@@ -24,7 +26,9 @@ export default function CardScreen(props: CardScreenProps) {
     <S.CardScreenSection>
       <G.Container>
         <S.CardWrapper>
-          <Image src={cardImg} width={456} height={336} alt="" />
+          <S.CardImg>
+            <Image src={cardImg} width={456} height={336} alt="" />
+          </S.CardImg>
 
           <S.CardContent>
             <S.CardAnother onClick={handdleClearBack}>
@@ -39,12 +43,15 @@ export default function CardScreen(props: CardScreenProps) {
 
               <S.CardInfos>
                 <p>{dataValue.name}</p>
-                <p>{dataValue.phone}</p>
+                <p>{formatPhoneNumber(dataValue.phone)}</p>
                 <p>{dataValue.email}</p>
               </S.CardInfos>
             </S.Card>
 
-            <Button disabled={true}>Baixar Cartão</Button>
+            <Button disabled={true}>
+              <Image src={arrowImg} width={10} height={16} alt="" /> Baixar
+              Cartão
+            </Button>
 
             <Link
               href="https://app.rdstation.com.br/signup"

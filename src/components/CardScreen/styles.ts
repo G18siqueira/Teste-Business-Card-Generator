@@ -20,13 +20,12 @@ export const CardWrapper = styled.div`
     justify-content: center;
     gap: 5.9375rem;
   }
+`
+export const CardImg = styled.div`
+  display: none;
 
-  img {
-    display: none;
-
-    @media screen and (min-width: 1200px) {
-      display: block !important;
-    }
+  @media screen and (min-width: 1200px) {
+    display: block !important;
   }
 `
 export const CardContent = styled.div`
@@ -38,12 +37,16 @@ export const CardContent = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.75rem;
     font-weight: 800;
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
     color: var(--white);
     margin: 1.75rem 0 0;
+
+    @media screen and (min-width: 513px) {
+      gap: 0.75rem;
+    }
 
     &:hover {
       span {
@@ -96,7 +99,7 @@ export const Card = styled.div`
   align-items: center;
   width: 100%;
   background-color: var(--white);
-  color: #000;
+  color: var(--black);
   padding: 0.9688rem 2.25rem;
   margin: 1rem 0;
   border-radius: 24px;
@@ -106,7 +109,6 @@ export const Card = styled.div`
   }
 
   img {
-    display: block;
     width: 45px;
     height: 38px;
 
@@ -124,7 +126,6 @@ export const CardSeparator = styled.div`
   background-color: var(--purple-300);
   margin: 0 1.25rem;
 `
-
 export const CardInfos = styled.div`
   display: flex;
   flex-direction: column;

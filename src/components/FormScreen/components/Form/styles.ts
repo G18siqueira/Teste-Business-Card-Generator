@@ -41,6 +41,8 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 2.25rem;
     font-size: 0.875rem;
+    color: var(--gray-800);
+    line-height: 1.4;
     border: none;
     outline: none;
     transition: all 0.2s ease-in-out;
@@ -53,7 +55,7 @@ export const Wrapper = styled.div`
   }
 
   span {
-    color: var(--red-300);
+    color: var(--yellow-700);
     font-size: 0.75rem;
   }
 `
@@ -86,8 +88,8 @@ export const Agree = styled.div`
     &::before {
       content: '';
       display: block;
-      width: 0.375rem;
-      height: 0.375rem;
+      width: 0.3125rem;
+      height: 0.3125rem;
       background-color: var(--white);
       margin: 0 0.75rem 0 0;
       border-radius: 50%;

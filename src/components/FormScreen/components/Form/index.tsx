@@ -1,5 +1,6 @@
 import { useState, FormEvent, ChangeEvent, useContext } from 'react'
 import { DataContext } from '@/contexts/DataContext'
+import { formatPhoneNumber } from '@/utils/formatter'
 import { MdArrowRightAlt } from 'react-icons/md'
 
 import Button from '@/components/Ui/Button'
@@ -37,7 +38,6 @@ export default function Form() {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (validateForm()) {
-      // setDataValue((prevData) => ({ ...prevData, submitted: true }))
       setIsLoading(true)
       setTimeout(() => {
         setDataValue((prevData) => ({ ...prevData }))
@@ -57,7 +57,7 @@ export default function Form() {
 
     // Validating name
     if (dataValue.name.trim().length < 2) {
-      newErrors.name = 'O nome deve ter pelo menos 2 caracteres'
+      newErrors.name = 'Digite o seu Nome e Sobrenome'
       isValid = false
     }
 
@@ -79,15 +79,6 @@ export default function Form() {
     return isValid
   }
 
-  const formatPhoneNumber = (phone: string) => {
-    const cleaned = phone.replace(/\D/g, '')
-    const match = cleaned.match(/^(\d{2})(\d{4,5})(\d{4})$/)
-    if (match) {
-      return `(${match[1]}) ${match[2]}-${match[3]}`
-    }
-    return phone
-  }
-
   return (
     <S.Form onSubmit={handleSubmit}>
       <S.WrapperContainer>
@@ -97,7 +88,7 @@ export default function Form() {
             id="name"
             name="name"
             type="text"
-            placeholder="Digite seu nome completo"
+            placeholder="Ex: Pedro Silva"
             value={dataValue.name}
             onChange={handleChange}
           />

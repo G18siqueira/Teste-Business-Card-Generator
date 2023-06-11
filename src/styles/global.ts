@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     --gradient: linear-gradient(93.82deg, #6C5AE0 -1.6%, #806EFF 105.56%);
 
     --white: #fff;
-    --balck: #000;
+    --black: #000;
 
     --gray-100: #F1F3F5;
     --gray-200: #E1E4E8;
@@ -23,8 +23,6 @@ export const GlobalStyle = createGlobalStyle`
     --yellow-300: #F8DCA0;
     --yellow-600: #F4CA6D;
     --yellow-700: #F2BF4E;   
-
-    --red-300: #ff8383;
     
     --nunitoSans: 'Nunito Sans', sans-serif;
     --darkerGrotesque: 'Darker Grotesque', sans-serif;
@@ -39,10 +37,13 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     overflow-x: hidden;
+    -webkit-font-smoothing: 'antialiased',
   }
 
   body, input, button{
-    font-family: var(--nunitoSans)
+    font-family: var(--nunitoSans);
+    font-weight: 400;
+    line-height: 1.5;
   }
 
   main{

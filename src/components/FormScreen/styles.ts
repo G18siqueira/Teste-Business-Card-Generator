@@ -31,6 +31,7 @@ export const Title = styled.div`
   p {
     @media screen and (min-width: 768px) {
       font-size: 1.25rem;
+      line-height: 1.4;
     }
   }
 `
