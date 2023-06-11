@@ -1,10 +1,12 @@
+import { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
-export function Layout() {
+export function Layout({ children }: { children: ReactNode }) {
   return (
     <>
       <Header />
+      {children}
       <Footer />
     </>
   )
