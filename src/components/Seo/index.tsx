@@ -1,5 +1,6 @@
-import Head from 'next/head'
 import { ReactNode } from 'react'
+
+import Head from 'next/head'
 
 interface SeoNameProps {
   title: string

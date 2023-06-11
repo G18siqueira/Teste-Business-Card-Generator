@@ -1,7 +1,8 @@
-import { Layout } from '@/components/Layout'
-import DataProvider from '@/contexts/DataContext'
-import { GlobalStyle } from '@/styles/global'
 import type { AppProps } from 'next/app'
+import { Layout } from '@/components/Layout'
+import { GlobalStyle } from '@/styles/global'
+
+import DataProvider from '@/contexts/DataContext'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

@@ -1,7 +1,8 @@
-import * as G from '@/styles/global'
-import * as S from './styles'
 import loadingImg from '../../assets/loading.svg'
 import Image from 'next/image'
+
+import * as G from '@/styles/global'
+import * as S from './styles'
 
 interface LoadingProps {}
 export default function Loading(props: LoadingProps) {

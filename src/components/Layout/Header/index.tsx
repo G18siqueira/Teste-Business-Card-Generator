@@ -1,8 +1,8 @@
-import * as G from '@/styles/global'
-import * as S from './styles'
-
 import Image from 'next/image'
 import logoImg from '../../../assets/logo.svg'
+
+import * as G from '@/styles/global'
+import * as S from './styles'
 
 export default function Header() {
   return (

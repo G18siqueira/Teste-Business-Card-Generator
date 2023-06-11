@@ -1,8 +1,9 @@
-import * as G from '@/styles/global'
-import * as S from './styles'
 import Form from './components/Form'
 import Image from 'next/image'
 import cardImg from '../../assets/landingpage1.png'
+
+import * as G from '@/styles/global'
+import * as S from './styles'
 
 interface FormScreenProps {}
 export default function FormScreen(props: FormScreenProps) {

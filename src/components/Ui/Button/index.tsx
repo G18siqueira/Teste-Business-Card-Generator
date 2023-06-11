@@ -1,8 +1,9 @@
 import React, { ButtonHTMLAttributes } from 'react'
-import { GeneralButton } from './styles'
+
+import * as S from './styles'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 
 export default function Button(props: ButtonProps) {
-  return <GeneralButton {...props}></GeneralButton>
+  return <S.GeneralButton {...props}></S.GeneralButton>
 }
